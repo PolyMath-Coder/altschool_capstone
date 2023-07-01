@@ -30,6 +30,14 @@ This API uses a database of location data and a caching mechanism for better per
 $ npm install
 ```
 
+## Contributor
+
+- Ayooluwa Adeleke
+
+## StudentID
+
+- ALT/SOE/022/1367
+
 ## Running the app
 
 ```bash
@@ -54,7 +62,8 @@ $ npm run test
 - Redis: Follow this guide to install Redis: [Redis Installation Guide](https://redis.io/download)
 
 ## Endpoints
-The API will be accessible at `http://localhost:3000/` or `https://locale-api.onrender.com/api`.
+
+The API's are accessible with the [Live API](https://locale-api.onrender.com/api) Base URL
 
 ### Signup User
 
@@ -64,7 +73,7 @@ The API will be accessible at `http://localhost:3000/` or `https://locale-api.on
 
 ```
 {
-    "username": "John Does",
+    "username": "John Doe",
     "email": "john@gmail.com",
     "password": "password23",
 
@@ -125,40 +134,58 @@ Retrieve all state information.
 **Filter Samples For Postman:**
 
 1. ##### No parameters: Get All Information
+
 ###### Request Type: GET
+
 - URL: http://base_url/search/all
 
 2. ##### Filtering with filter parameter: This filter only applies to state, region and lgas names.
+
 ###### Request Type: GET
+
 URL: http://base_url/search/all?filter=states/regions/lgas
 
 3. ##### Filtering with populationGt and populationLt parameters: These filters apply to the population field.
+
 ###### Request Type: GET
+
 - URL: http://base_url/search/all?populationGt=1000000&populationLt=5000000(Don't go below the overall population minium no. 1,704,515)
 
 4. ##### Exact match on a single field: This tests exact match filtering on one field, such as capital.
+
 ###### Request Type: GET
+
 - URL: http://base_url/search/all?capital=Ikeja
 
 5. ##### Exact match on multiple fields: This tests exact match filtering on multiple fields.
+
 ###### Request Type: GET
+
 - URL: http://your_base_url/search/all?capital=Abuja&slogan=Unity%20and%20Faith
 
 6. ##### Exact match on an array field: This tests exact match filtering on an array field, such as senatorial_districts.
+
 ###### Request Type: GET
+
 URL: http://base_url/search/all?past_governors=Babatunde%20Fashola&past_governors=Bola%20Tinubu(On swagger add two string items)
 `Or`
+
 ###### Request Type: GET
+
 URL: http://base_url/search/all?past_governors[]=Babatunde%20Fashola(If you want to search for just one info in the array/. Works for Postman only)
 
 - `Do for other array fields e.g borders, knownfor etc`
 
 7. ##### Sorting with sortField and sortOrder: These control the order of the results.
+
 ###### Request Type: GET
+
 URL: http://base_url/search/all?sortField=state&sortOrder=asc
 
 8. ##### Using page and limit parameters: These control pagination and the number of results per page.
+
 ###### Request Type: GET
+
 URL: http://base_url/search/all?page=1&limit=10
 
 **Response:**
@@ -234,3 +261,11 @@ Retrieve States for a specific region.
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+## Contributor
+
+- Ayooluwa Adeleke
+
+## StudentID
+
+- ALT/SOE/022/1367

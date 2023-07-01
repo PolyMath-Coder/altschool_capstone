@@ -1,8 +1,8 @@
 {
-  "name": "locale-api",
+  "name": "Customized locale-API",
   "version": "0.0.1",
   "description": "",
-  "author": "",
+  "author": "Ayooluwa Adeleke",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
